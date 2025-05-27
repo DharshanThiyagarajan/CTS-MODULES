@@ -1,36 +1,26 @@
-<html lang="en">
+<form>
+  Phone: <input type="text" id="phone" onblur="validatePhone(this)">
+  <br>
+  Event Fee:
+  <select onchange="document.getElementById('fee').textContent=this.value">
+    <option value="Free">Free</option>
+    <option value="$10">$10</option>
+  </select>
+  <span id="fee"></span>
+  <br>
+  <button type="button" onclick="alert('Submitted!')">Submit</button>
+  <br>
+  <img src="event.jpg" ondblclick="this.style.width='300px'" width="150">
+  <br>
+  Feedback:
+  <textarea onkeyup="document.getElementById('charCount').textContent=this.value.length"></textarea>
+  <p>Characters: <span id="charCount">0</span></p>
+</form>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
- <link href="css/bootstrap.min.css" rel="stylesheet">
-
-      <script src="js/bootstrap.bundle.min.js"></script>
-
-    <title>Document</title>
-</head>
-
-<body>
-    <nav class="container mt-4">
-        <div class="d-flex flex-column flex-md-row justify-content-between align-items-center bg-light p-3 border">
-            <a href="#" class="text-decoration-none text-dark fw-bold">MyLogo</a>
-            <a href="#" class="mx-2">Home</a>
-            <a href="#" class="mx-2">About</a>
-            <a href="#" class="mx-2">Contact</a>
-        </div>
-        <div class="container mt-5">
-            <div class="card p-3">
-                <div class="d-flex justify-content-between align-items-center">
-                    <div>
-                        <h5 class="card-title mb-1">Card Title</h5>
-                        <p class="mb-0 text-muted">Subtitle or detail</p>
-                    </div>
-                    <button class="btn btn-outline-primary">Action</button>
-                </div>
-            </div>
-        </div>
-
-    </nav>
-</body>
-
-</html>
+<script>
+function validatePhone(input) {
+  if (!/^[0-9]{10}$/.test(input.value)) {
+    alert('Enter 10-digit phone number');
+  }
+}
+</script>
