@@ -1,0 +1,19 @@
+@media (max-width: 768px) {
+  nav ul {
+    display: flex;
+    flex-direction: column;
+  }
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+
+  body {
+    font-size: 14px;
+  }
+
+  .container {
+    width: 90vw;
+  }
+}

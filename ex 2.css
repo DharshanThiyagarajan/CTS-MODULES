@@ -1,0 +1,8 @@
+/* Layout for main CTA button */
+.cta-button {
+  background-color: #007BFF;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-weight: bold;
+}
